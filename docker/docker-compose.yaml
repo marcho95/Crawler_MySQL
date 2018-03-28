@@ -1,0 +1,41 @@
+version: '2'
+services:
+    agh-php:
+        build: ./php
+        container_name: agh-php
+        hostname: agh-php
+        environment:
+            - USERID=${USERID}
+            - GROUPID=${GROUPID}
+        ports:
+            - 80:80
+        volumes:
+            - ../:/var/www/agh
+            - ~/.ssh:/home/agh/.ssh
+            - ~/.gitconfig:/home/agh/.gitconfig
+        links:
+            - agh-mysql:mysql
+        depends_on:
+            - agh-mysql
+    agh-mysql:
+        image: mysql:5.6
+        container_name: agh-mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: mysql
+        expose:
+            - 3306
+        volumes:
+            - ../../mysql_data:/var/lib/mysql
+    agh-phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: agh-phpmyadmin
+        restart: always
+        ports:
+            - 8080:80
+        volumes:
+            - ../../phpmyadmin_sessions:/sessions
+        links:
+            - agh-mysql:db
+        depends_on:
+            - agh-mysql
