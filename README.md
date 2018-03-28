@@ -1,6 +1,6 @@
 # Crawler_MySQL
 
-# # Wyjściowe repozytorium dla zadania "MySQL" zajęć TTAI
+# Wyjściowe repozytorium dla zadania "MySQL" zajęć TTAI
 
 Zawiera:
 - minimalny kod crawlera
