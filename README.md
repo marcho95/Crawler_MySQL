@@ -23,6 +23,6 @@ Co to znaczy "sensowny pull request"?:
 - zmiany organizacyjne kodu.
 
 Nie wszystkie pull requesty będą "domergowywane", ale każde sensowne otrzyma komentarz o tym, że jest sensowny :)
-Jezeli pull request się powtarza - wygrywa pierwszy zgłoszony.
+Jeżeli pull request się powtarza - wygrywa pierwszy zgłoszony.
 
 Po zgłoszeniu więcej niż 2 pull requestów przez tę samą osobę - każde kolejne nie będzie domergowywane.
