@@ -69,18 +69,18 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="header">Crawler</div>
-  	<div class="search">
+    <div id="header">Crawler</div>
+  	<div id="search">
         <form action="" type="GET">
-            <div class="search-container">
-                <input type="text" class="search-input" name="url" value="<?php if(!empty($_GET['url'])){ echo $url; } ?>">
+            <div id="search-container">
+                <input type="text" id="search-input" name="url" value="<?php if(!empty($_GET['url'])){ echo $url; } ?>">
             </div>
-            <div class="submit-container">
-                <input class="submit" type="submit" value="Crawl!">
+            <div id="submit-container">
+                <input id="submit" type="submit" value="Crawl!">
             </div>
         </form>
   	</div>
-    <div class="result">
+    <div id="result">
         <?php
             echo $pageCrawlerResult;
         ?>
